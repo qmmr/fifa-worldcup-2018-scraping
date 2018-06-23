@@ -2,17 +2,10 @@ const MongoClient = require('mongodb').MongoClient
 const request = require('request')
 const cheerio = require('cheerio')
 
-// emoji: { type: String, required: false },
-// emojiString: { type: String, required: false },
-// fifaCode: { type: String, required: false },
-// flag: { type: String, required: false },
-// iso2: { type: String, required: false },
-// name: { type: String, required: false },
 const URL = process.env.URL || 'https://www.fifa.com/worldcup/matches/'
 const HOST = process.env.HOST || '127.0.0.1'
 const PORT = process.env.PORT || '27017'
 const DB = process.env.DB || 'world-cup-2018'
-const COLLECTION = process.env.COLLECTION || 'games'
 
 const findMatches = matches => {
   return new Promise((resolve, reject) => {
@@ -106,7 +99,7 @@ MongoClient.connect(`mongodb://${HOST}:${PORT}/${DB}`).then(database => {
         // After parsing all games from html we can insert them to the DB
         if (matches.length) {
           console.log(`Found ${matches.length} matches, inserting into DB...\n`)
-          db.collection(COLLECTION).insertMany(matches, (err, doc) => {
+          db.collection('games').insertMany(matches, (err, doc) => {
             if (err) throw err
             console.log(`Successfully inserted ${doc.insertedCount} documents 👍`)
           })
