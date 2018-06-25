@@ -61,12 +61,12 @@ const createMatchData = ($match, teams) => {
     matchURI: $match.attr('href'),
     stadium: $match.find('.fi__info__stadium').text(),
     venue: $match.find('.fi__info__venue').text(),
-    homeTeam,
+    homeTeam: homeTeam._id,
     score: $match
       .find('.fi-s__score .fi-s__scoreText')
       .text()
       .trim(),
-    awayTeam,
+    awayTeam: awayTeam._id,
   }
 
   return matchData
@@ -91,11 +91,13 @@ MongoClient.connect(`mongodb://${HOST}:${PORT}/${DB}`).then(database => {
         $('.fi-mu__link').each((idx, match) => {
           const matchData = createMatchData($(match), teams)
           if (matchData.finished) {
+            // FIXME: Fix logging
             console.log(`${++idx}. ${matchData.homeTeam.name} ${matchData.score} ${matchData.awayTeam.name}`)
             matches.push(matchData)
           }
         })
 
+        // TODO: How to avoid duplicates?
         // After parsing all games from html we can insert them to the DB
         if (matches.length) {
           console.log(`Found ${matches.length} matches, inserting into DB...\n`)
