@@ -6,7 +6,6 @@
     "emojiString": "🇷🇺",
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/900px-Flag_of_Russia.png",
     "games": [],
-    "id": "vu1sNShGuKLLZkYUF35nio",
     "iso2": "ru",
     "name": "Russia",
     "shortName": "RUS"
@@ -18,7 +17,6 @@
     "emojiString": "🇸🇦",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/750px-Flag_of_Saudi_Arabia.png",
     "games": [],
-    "id": "62benYt8xDUmraQFLu877o",
     "iso2": "sa",
     "name": "Saudi Arabia",
     "shortName": "KSA"
@@ -30,7 +28,6 @@
     "emojiString": "🇪🇬",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/900px-Flag_of_Egypt.png",
     "games": [],
-    "id": "uStjGqZgNirCvFJWb9jX6Q",
     "iso2": "eg",
     "name": "Egypt",
     "shortName": "EGY"
@@ -42,7 +39,6 @@
     "emojiString": "🇺🇾",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/900px-Flag_of_Uruguay.png",
     "games": [],
-    "id": "u7t66iV2U2wSnL8By6SKcm",
     "iso2": "uy",
     "name": "Uruguay",
     "shortName": "URU"
@@ -54,7 +50,6 @@
     "emojiString": "🇵🇹",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/600px-Flag_of_Portugal.png",
     "games": [],
-    "id": "tbzb9NQELcSw5T9hWrg74y",
     "iso2": "pt",
     "name": "Portugal",
     "shortName": "POR"
@@ -66,7 +61,6 @@
     "emojiString": "🇪🇸",
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/750px-Flag_of_Spain.png",
     "games": [],
-    "id": "6eCHsiWr6Z5UmVx4u4gYMb",
     "iso2": "es",
     "name": "Spain",
     "shortName": "ESP"
@@ -78,7 +72,6 @@
     "emojiString": "🇲🇦",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/900px-Flag_of_Morocco.png",
     "games": [],
-    "id": "bp14ousCu3q5KNf2YWGrDi",
     "iso2": "ma",
     "name": "Morocco",
     "shortName": "MAR"
@@ -90,7 +83,6 @@
     "emojiString": "🇮🇷",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Flag_of_Iran.svg/630px-Flag_of_Iran.png",
     "games": [],
-    "id": "jyj63Newyf3kC5TxxAkWjX",
     "iso2": "ir",
     "name": "Iran",
     "shortName": "IRN"
@@ -102,7 +94,6 @@
     "emojiString": "🇫🇷",
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/900px-Flag_of_France.png",
     "games": [],
-    "id": "64SjtDdtKZ4M4XvCHAAKyY",
     "iso2": "fr",
     "name": "France",
     "shortName": "FRA"
@@ -114,7 +105,6 @@
     "emojiString": "🇦🇺",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/1280px-Flag_of_Australia_%28converted%29.png",
     "games": [],
-    "id": "cbJj6j2uLVY6iryJZjJLM1",
     "iso2": "au",
     "name": "Australia",
     "shortName": "AUS"
@@ -126,7 +116,6 @@
     "emojiString": "🇵🇪",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Flag_of_Peru_%28state%29.svg/900px-Flag_of_Peru_%28state%29.png",
     "games": [],
-    "id": "m5dzrmR2DoRYKrJDhN5wTj",
     "iso2": "pe",
     "name": "Peru",
     "shortName": "PER"
@@ -138,7 +127,6 @@
     "emojiString": "🇩🇰",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/740px-Flag_of_Denmark.png",
     "games": [],
-    "id": "fHSQtvgoDenLZnjiMUpdtB",
     "iso2": "dk",
     "name": "Denmark",
     "shortName": "DEN"
@@ -150,7 +138,6 @@
     "emojiString": "🇦🇷",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/Flag_of_Argentina.svg/800px-Flag_of_Argentina.png",
     "games": [],
-    "id": "izGHm5C34mhTqHay6ENg67",
     "iso2": "ar",
     "name": "Argentina",
     "shortName": "ARG"
@@ -162,7 +149,6 @@
     "emojiString": "🇮🇸",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/800px-Flag_of_Iceland.png",
     "games": [],
-    "id": "ojfi4JyHghWucSPqXkVCkP",
     "iso2": "is",
     "name": "Iceland",
     "shortName": "ISL"
@@ -174,7 +160,6 @@
     "emojiString": "🇭🇷",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/800px-Flag_of_Croatia.png",
     "games": [],
-    "id": "gPDQKGk8LjSmmQpiHiqaJB",
     "iso2": "hr",
     "name": "Croatia",
     "shortName": "CRO"
@@ -186,7 +171,6 @@
     "emojiString": "🇳🇬",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_Nigeria.svg/800px-Flag_of_Nigeria.png",
     "games": [],
-    "id": "6AcoRGKMEYm8viAyifxnFZ",
     "iso2": "ng",
     "name": "Nigeria",
     "shortName": "NGA"
@@ -198,7 +182,6 @@
     "emojiString": "🇧🇷",
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/0/05/Flag_of_Brazil.svg/720px-Flag_of_Brazil.png",
     "games": [],
-    "id": "qCEyuLSsFfd3yxCpUbQ2b9",
     "iso2": "br",
     "name": "Brazil",
     "shortName": "BRA"
@@ -210,7 +193,6 @@
     "emojiString": "🇨🇭",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/320px-Flag_of_Switzerland_%28Pantone%29.png",
     "games": [],
-    "id": "cDPVFgSVkidu9KPU73riTd",
     "iso2": "ch",
     "name": "Switzerland",
     "shortName": "SUI"
@@ -222,7 +204,6 @@
     "emojiString": "🇨🇷",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Costa_Rica_%28state%29.svg/833px-Flag_of_Costa_Rica_%28state%29.png",
     "games": [],
-    "id": "Jh1YRJpc3MAF5GG1ots8M",
     "iso2": "cr",
     "name": "Costa Rica",
     "shortName": "CRC"
@@ -234,7 +215,6 @@
     "emojiString": "🇷🇸",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/1350px-Flag_of_Serbia.png",
     "games": [],
-    "id": "oXiqgaZP1YcoUVvtPMw3RS",
     "iso2": "rs",
     "name": "Serbia",
     "shortName": "SRB"
@@ -246,7 +226,6 @@
     "emojiString": "🇩🇪",
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/800px-Flag_of_Germany.png",
     "games": [],
-    "id": "dAfBH6pACdhb94JNGx4RLC",
     "iso2": "de",
     "name": "Germany",
     "shortName": "GER"
@@ -258,7 +237,6 @@
     "emojiString": "🇲🇽",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/800px-Flag_of_Mexico.png",
     "games": [],
-    "id": "tM4BXiMvBCFj8xffM1pDzs",
     "iso2": "mx",
     "name": "Mexico",
     "shortName": "MEX"
@@ -270,7 +248,6 @@
     "emojiString": "🇸🇪",
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/1600px-Flag_of_Sweden.png",
     "games": [],
-    "id": "oCbZ6PbFPzZP4EugFFCqQf",
     "iso2": "se",
     "name": "Sweden",
     "shortName": "SWE"
@@ -282,7 +259,6 @@
     "emojiString": "🇰🇷",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/900px-Flag_of_South_Korea.png",
     "games": [],
-    "id": "3W7yB3rzg7pNpQ5Gd71cEj",
     "iso2": "kr",
     "name": "South Korea",
     "shortName": "KOR"
@@ -294,7 +270,6 @@
     "emojiString": "🇧🇪",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/450px-Flag_of_Belgium.png",
     "games": [],
-    "id": "nXV76SrhfpYvHpJYPSCy3c",
     "iso2": "be",
     "name": "Belgium",
     "shortName": "BEL"
@@ -306,7 +281,6 @@
     "emojiString": "🇵🇦",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Flag_of_Panama.svg/450px-Flag_of_Panama.png",
     "games": [],
-    "id": "dFRyNUHacNtbL6H2ZomvcS",
     "iso2": "pa",
     "name": "Panama",
     "shortName": "PAN"
@@ -318,7 +292,6 @@
     "emojiString": "🇹🇳",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/1200px-Flag_of_Tunisia.png",
     "games": [],
-    "id": "m8JRWUUiiJnZmzgz2pHTyC",
     "iso2": "tn",
     "name": "Tunisia",
     "shortName": "TUN"
@@ -330,7 +303,6 @@
     "emojiString": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/b/be/Flag_of_England.svg/800px-Flag_of_England.png",
     "games": [],
-    "id": "e4rzjfYCyN5e3oYpqtNiQe",
     "iso2": "gb-eng",
     "name": "England",
     "shortName": "ENG"
@@ -342,7 +314,6 @@
     "emojiString": "🇵🇱",
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/1280px-Flag_of_Poland.png",
     "games": [],
-    "id": "iA8PLFaMLPPdcdoQZ17mEf",
     "iso2": "pl",
     "name": "Poland",
     "shortName": "POL"
@@ -354,7 +325,6 @@
     "emojiString": "🇸🇳",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/900px-Flag_of_Senegal.svg.png",
     "games": [],
-    "id": "v3BdKjRvLFZSmK4Jjyo5Ae",
     "iso2": "sn",
     "name": "Senegal",
     "shortName": "SEN"
@@ -366,7 +336,6 @@
     "emojiString": "🇨🇴",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Colombia.svg/450px-Flag_of_Colombia.png",
     "games": [],
-    "id": "jexotNmEghJDp157LnXHYR",
     "iso2": "co",
     "name": "Colombia",
     "shortName": "COL"
@@ -378,7 +347,6 @@
     "emojiString": "🇯🇵",
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/900px-Flag_of_Japan.png",
     "games": [],
-    "id": "63zb122wgAuXMxmiScXrJ1",
     "iso2": "jp",
     "name": "Japan",
     "shortName": "JPN"
