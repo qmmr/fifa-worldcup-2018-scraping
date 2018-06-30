@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "flow": "flow check"
   },
   "keywords": [],
   "author": "",
@@ -12,13 +13,13 @@
   "dependencies": {
     "cheerio": "1.0.0-rc.2",
     "mongodb": "3.0.10",
-    "prettier": "1.13.5",
     "request": "2.87.0"
   },
   "devDependencies": {
     "eslint": "4.19.1",
     "eslint-config-airbnb-base": "13.0.0",
     "eslint-plugin-import": "2.12.0",
-    "flow-bin": "0.74.0"
+    "flow-bin": "0.74.0",
+    "prettier": "1.13.5"
   }
 }
