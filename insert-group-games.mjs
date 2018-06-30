@@ -1,20 +1,12 @@
-const MongoClient = require('mongodb').MongoClient
-const request = require('request')
-const cheerio = require('cheerio')
+#! /usr/bin/env node --experimental-modules
+import mongodb from 'mongodb'
+import request from 'request'
+import cheerio from 'cheerio'
 
 const URL = process.env.URL || 'https://www.fifa.com/worldcup/matches/'
 const HOST = process.env.HOST || '127.0.0.1'
 const PORT = process.env.PORT || '27017'
 const DB = process.env.DB || 'world-cup-2018'
-
-const findMatches = matches => {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log('resolving...')
-      resolve(matches)
-    }, 1000)
-  })
-}
 
 const asyncRequest = (url, options) =>
   new Promise((resolve, reject) => {
@@ -36,22 +28,11 @@ const createMatchData = ($match, teams) => {
   const $awayTeam = $match.find('.fi-mu__m .away')
   const homeTeamISO2 = $homeTeam.find('.fi-t__nTri').text()
   const awayTeamISO2 = $awayTeam.find('.fi-t__nTri').text()
-  const teamHomeId = $homeTeam.data('team-id')
-  const awayTeamId = $awayTeam.data('team-id')
-  // {
-  // 	name: $homeTeam.find('.fi-t__nText').text(),
-  // 	iso2: $homeTeam.find('.fi-t__nTri').text(),
-  // 	image: $homeTeam.find('img').attr('src'),
-  // }
-  // {
-  // 	name: $awayTeam.find('.fi-t__nText').text(),
-  // 	iso2: $awayTeam.find('.fi-t__nTri').text(),
-  // 	image: $awayTeam.find('img').attr('src'),
-  // }
-
+  // const teamHomeId = $homeTeam.data('team-id') // TODO: Use this to get more info about the team
+  // const awayTeamId = $awayTeam.data('team-id')
   // Find teams from DB teams
-  const homeTeam = teams.filter(team => team.fifaCode === homeTeamISO2)[0]
-  const awayTeam = teams.filter(team => team.fifaCode === awayTeamISO2)[0]
+  const homeTeam = teams.filter(team => team.shortName === homeTeamISO2)[0]
+  const awayTeam = teams.filter(team => team.shortName === awayTeamISO2)[0]
   const matchData = {
     status,
     matchURI,
@@ -72,7 +53,7 @@ const createMatchData = ($match, teams) => {
   return matchData
 }
 
-MongoClient.connect(`mongodb://${HOST}:${PORT}/${DB}`).then(database => {
+mongodb.MongoClient.connect(`mongodb://${HOST}:${PORT}/${DB}`).then(database => {
   const db = database.db(DB)
   console.log(`You're connected to: mongodb://${HOST}:${PORT}/${DB}\n`)
   const matches = []
@@ -109,7 +90,7 @@ MongoClient.connect(`mongodb://${HOST}:${PORT}/${DB}`).then(database => {
       } catch (error) {
         console.error(error)
       } finally {
-        console.info('\nClosing connection to the DB\nBye!\n')
+        console.info('\nClosing connection to the DB\nBye! 👋\n')
         database.close()
       }
     })
