@@ -33,11 +33,13 @@ const createMatchData = ($match, teams) => {
   // Find teams from DB teams
   const homeTeam = teams.filter(team => team.shortName === homeTeamISO2)[0]
   const awayTeam = teams.filter(team => team.shortName === awayTeamISO2)[0]
-  const matchData = {
+
+  return {
     status,
     matchURI,
     finished,
     _typeName: 'Game', // GraphQL type
+    stage: 'group', // First stage of the tournament
     datetime: $match.find('.fi-mu__info__datetime').data('utcdate'),
     matchURI: $match.attr('href'),
     stadium: $match.find('.fi__info__stadium').text(),
@@ -49,8 +51,6 @@ const createMatchData = ($match, teams) => {
       .trim(),
     awayTeam: awayTeam._id,
   }
-
-  return matchData
 }
 
 mongodb.MongoClient.connect(`mongodb://${HOST}:${PORT}/${DB}`).then(database => {
