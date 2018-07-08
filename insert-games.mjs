@@ -3,22 +3,12 @@ import mongodb from 'mongodb'
 import request from 'request'
 import cheerio from 'cheerio'
 import differenceBy from 'lodash/differenceBy'
+import asyncRequest from './async-request'
 
 const URL = process.env.URL || 'https://www.fifa.com/worldcup/matches/#groupphase'
 const HOST = process.env.HOST || '127.0.0.1'
 const PORT = process.env.PORT || '27017'
 const DB = process.env.DB || 'world-cup-2018'
-
-const asyncRequest = (url, options) =>
-  new Promise((resolve, reject) => {
-    request(url, (err, response, html) => {
-      if (!err && response.statusCode === 200) {
-        resolve({ response, html })
-      } else {
-        reject(err)
-      }
-    })
-  })
 
 const getStage = matchUTCDate => {
   const matchDate = new Date(matchUTCDate)
