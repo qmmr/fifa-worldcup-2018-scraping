@@ -15,7 +15,7 @@
   1. run it from the terminal `./update-teams.mjs`
 
 Insert teams populates your DB with teams data from `teams.json`.
-Insert games scrapes the website and populates your DB with games data.
+Insert games scrapes the [https://www.fifa.com/worldcup/matches/](https://www.fifa.com/worldcup/matches/) and populates your DB with games data.
 Update teams associates the games with teams (in order to fetch teams games).
 
 Have fun! 👋
