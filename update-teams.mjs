@@ -41,8 +41,8 @@ mongodb.MongoClient.connect(`mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB
             const awayTeam = await db
               .collection('teams')
               .findOneAndUpdate({ _id: mongodb.ObjectID(game.awayTeam) }, { $addToSet: { games: game._id } })
-            console.log('homeTeam', homeTeam.shortName, homeTeam.games)
-            console.log('awayTeam', awayTeam.shortName, awayTeam.games)
+            console.log(`homeTeam ${homeTeam.value.shortName} played ${homeTeam.value.games.length} games`)
+            console.log(`awayTeam ${awayTeam.value.shortName} played ${awayTeam.value.games.length} games`)
             resolve(game)
           } catch (error) {
             reject(error)
