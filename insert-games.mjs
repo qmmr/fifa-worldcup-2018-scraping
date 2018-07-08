@@ -83,51 +83,61 @@ const createMatchData = ($match, teams) => {
   }
 }
 
-mongodb.MongoClient.connect(`mongodb://${HOST}:${PORT}/${DB}`).then(database => {
+mongodb.MongoClient.connect(`mongodb://${HOST}:${PORT}/${DB}`).then(async database => {
   const db = database.db(DB)
   console.log(`You're connected to: mongodb://${HOST}:${PORT}/${DB}\n`)
-  const matches = []
+  const matcheDataList = []
 
   // fetch teams from DB
-  db.collection('teams')
+  const teams = await db
+    .collection('teams')
     .find({})
-    .toArray(async (err, teams) => {
-      console.log(`Found ${teams.length} teams\n`)
+    .toArray()
+  // fetch games from DB
+  const gamesInDB = await db
+    .collection('games')
+    .find({})
+    .toArray()
 
-      try {
-        const { response, html } = await asyncRequest(URL)
-        const $ = cheerio.load(html)
-        $('.fi-mu__link').each((idx, match) => {
-          const matchData = createMatchData($(match), teams)
+  // fetch data from URL and parse it using cheerio
+  const { response, html } = await asyncRequest(URL)
+  const $ = cheerio.load(html)
 
-          if (matchData.finished) {
-            matches.push(matchData)
-          }
-        })
+  // Create matchData from information found in '.fi-mu__link'
+  $('.fi-mu__link').each((idx, match) => {
+    const matchData = createMatchData($(match), teams)
 
-        // TODO: How to avoid duplicates?
-        // After parsing all games from html we can insert them to the DB
-        const games = await db
-          .collection('games')
-          .find({})
-          .toArray()
-        const newGames = differenceBy(matches, games, 'matchURL')
-        if (matches.length && newGames.length) {
-          console.log(`Found ${matches.length} matches, inserting into DB...\n`)
-          console.log('games already in db', games.length)
-          console.log('newGames', newGames.length)
-          db.collection('games').insertMany(newGames, (err, docs) => {
-            if (err) throw err
-            console.log(`Successfully inserted ${docs.insertedCount} documents 👍`)
-          })
-        } else {
-          console.log(`Sorry, no new matches found 😭`)
-        }
-      } catch (error) {
-        console.error(error)
-      } finally {
-        console.info('\nClosing connection to the DB\nBye! 👋\n')
-        database.close()
-      }
+    if (matchData.finished) {
+      matcheDataList.push(matchData)
+    }
+  })
+  // Find which games are not in DB yet
+  const gamesNotInDB = differenceBy(matcheDataList, gamesInDB, 'matchURL')
+
+  // Check if there are new games by comparing the 'matchURL'
+  if (matcheDataList.length && gamesNotInDB.length) {
+    console.log(`
+      Number of games in the DB: ${gamesInDB.length}
+      Found ${matcheDataList.length} new games, inserting into DB...
+    `)
+
+    db.collection('games').insertMany(gamesNotInDB, (err, docs) => {
+      if (err) throw err
+      console.log(`Successfully inserted ${docs.insertedCount} documents 👍`)
     })
+  } else {
+    console.log(`Sorry, no new matches found 😭`)
+  }
+
+  // TODO: Getting additional information from the match (statistics, players etc.)
+  // FIXME: Currently not possible with this setup, as the additional information is loaded with JS
+  // matcheDataList.forEach(collectMatchDetails)
+
+  // TODO: Not used right now, but might be needed later to update the teams with players
+  // teams.forEach(async (team, idx) => {
+  //   console.log(`#${++idx}: ${team.name}`)
+  // })
+
+  console.info('\nClosing connection to the DB\nBye! 👋\n')
+  database.close()
 })
