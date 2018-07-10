@@ -1,4 +1,4 @@
-#! /usr/bin/env node --experimental-modules
+#! /usr/bin/env node
 import dotenv from 'dotenv'
 import mongodb from 'mongodb'
 import request from 'request'
