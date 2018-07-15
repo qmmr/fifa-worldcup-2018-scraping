@@ -1,20 +1,9 @@
 #! /usr/bin/env node
-import dotenv from 'dotenv'
-import mongodb from 'mongodb'
 import request from 'request'
 import cheerio from 'cheerio'
 import differenceBy from 'lodash/differenceBy'
 import asyncRequest from './async-request'
-
-dotenv.config()
-
-// TODO: Check env variables and print error when not provided
-const DB_USER = process.env.DB_USER || 'admin'
-const DB_PASSWORD = process.env.DB_PASSWORD || 'password'
-const DB_HOST = process.env.DB_HOST || '127.0.0.1'
-const DB_PORT = process.env.DB_PORT || '27017'
-const DB_NAME = process.env.DB_NAME || 'fifa-worldcup-2018'
-const URL = process.env.URL || 'https://www.fifa.com/worldcup/matches/#groupphase'
+import { connect } from './db'
 
 const getStage = matchUTCDate => {
   const matchDate = new Date(matchUTCDate)
@@ -88,65 +77,59 @@ const createMatchData = ($match, teams) => {
     venue: $match.find('.fi__info__venue').text(),
   }
 }
+;(async () => {
+  const { db, disconnect } = await connect()
+  const matcheDataList = []
 
-mongodb.MongoClient.connect(`mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`).then(
-  async database => {
-    const db = database.db(DB_NAME)
-    console.log(
-      `Connection as user "${DB_USER}" to mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}\n has been established! 🎉\n`
-    )
-    const matcheDataList = []
+  // fetch teams from DB
+  const teams = await db
+    .collection('teams')
+    .find({})
+    .toArray()
+  // fetch games from DB
+  const gamesInDB = await db
+    .collection('games')
+    .find({})
+    .toArray()
 
-    // fetch teams from DB
-    const teams = await db
-      .collection('teams')
-      .find({})
-      .toArray()
-    // fetch games from DB
-    const gamesInDB = await db
-      .collection('games')
-      .find({})
-      .toArray()
+  // fetch data from URL and parse it using cheerio
+  const URL = 'https://www.fifa.com/worldcup/matches/#groupphase'
+  const { response, html } = await asyncRequest(URL)
+  const $ = cheerio.load(html)
 
-    // fetch data from URL and parse it using cheerio
-    const { response, html } = await asyncRequest(URL)
-    const $ = cheerio.load(html)
+  // Create matchData from information found in '.fi-mu__link'
+  $('.fi-mu__link').each((idx, match) => {
+    const matchData = createMatchData($(match), teams)
 
-    // Create matchData from information found in '.fi-mu__link'
-    $('.fi-mu__link').each((idx, match) => {
-      const matchData = createMatchData($(match), teams)
+    if (matchData.finished) {
+      matcheDataList.push(matchData)
+    }
+  })
+  // Find which games are not in DB yet
+  const gamesNotInDB = differenceBy(matcheDataList, gamesInDB, 'matchURL')
 
-      if (matchData.finished) {
-        matcheDataList.push(matchData)
-      }
-    })
-    // Find which games are not in DB yet
-    const gamesNotInDB = differenceBy(matcheDataList, gamesInDB, 'matchURL')
-
-    // Check if there are new games by comparing the 'matchURL'
-    if (matcheDataList.length && gamesNotInDB.length) {
-      console.log(`\n
+  // Check if there are new games by comparing the 'matchURL'
+  if (matcheDataList.length && gamesNotInDB.length) {
+    console.log(`\n
       Number of games in the DB: ${gamesInDB.length}
       Found ${matcheDataList.length} new games, inserting into DB...
     `)
 
-      db.collection('games').insertMany(gamesNotInDB, (err, docs) => {
-        if (err) throw err
-        console.log(`\nSuccessfully inserted ${docs.insertedCount} documents 👍\n`)
-      })
-    } else {
-      console.log(`\nSorry, no new matches found 😭\n`)
-    }
-
-    // FIXME: Currently not possible with this setup, as the additional information is loaded with JS
-    // matcheDataList.forEach(collectMatchDetails)
-
-    // TODO: Not used right now, but might be needed later to update the teams with players
-    // teams.forEach(async (team, idx) => {
-    //   console.log(`#${++idx}: ${team.name}`)
-    // })
-
-    console.info('\nClosing connection to the DB\nBye! 👋\n')
-    database.close()
+    db.collection('games').insertMany(gamesNotInDB, (err, docs) => {
+      if (err) throw err
+      console.log(`\nSuccessfully inserted ${docs.insertedCount} documents 👍\n`)
+    })
+  } else {
+    console.log(`\nSorry, no new matches found 😭\n`)
   }
-)
+
+  // FIXME: Currently not possible with this setup, as the additional information is loaded with JS
+  // matcheDataList.forEach(collectMatchDetails)
+
+  // TODO: Not used right now, but might be needed later to update the teams with players
+  // teams.forEach(async (team, idx) => {
+  //   console.log(`#${++idx}: ${team.name}`)
+  // })
+
+  disconnect()
+})()
