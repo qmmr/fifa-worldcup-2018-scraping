@@ -18,6 +18,7 @@
     "express": "4.16.3",
     "lodash": "4.17.10",
     "mongodb": "3.0.10",
+    "puppeteer": "1.6.0",
     "request": "2.87.0"
   },
   "devDependencies": {
