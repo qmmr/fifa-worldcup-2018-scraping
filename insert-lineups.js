@@ -1,23 +1,32 @@
 import puppeteer from 'puppeteer'
+import { connect } from './db'
 import getLineupForTeam from './getLineupForTeam'
-
-const URL = `https://www.fifa.com/worldcup/matches/match/300331537/#match-lineups`
 ;(async () => {
+  const { db, disconnect } = await connect()
   const browser = await puppeteer.launch()
   const page = await browser.newPage()
 
-  await page.goto(URL)
+  // Fetch games from DB
+  const games = await db
+    .collection('games')
+    .find()
+    .toArray()
 
-  // Wait for selector to appear on the page
-  await page.waitForSelector('.fi-players__onpitch--home > ul li .fi-p')
+  for (let game of games) {
+    console.log('game.matchURL', `${game.matchURL}#match-lineups`)
+    await page.goto(`${game.matchURL}#match-lineups`)
 
-  // Extract the results from the page...
-  const homeTeamLineup = await getLineupForTeam(page, 'home')
-  const awayTeamLineup = await getLineupForTeam(page, 'away')
+    // Wait for selector to appear on the page
+    await page.waitForSelector('.fi-players__onpitch--home > ul li .fi-p')
+    // Extract the results from the page...
+    const homeTeamLineup = await getLineupForTeam(page, 'home')
+    const awayTeamLineup = await getLineupForTeam(page, 'away')
 
-  console.log(`\nLineups for match:\n${URL}\n
-${homeTeamLineup.name} vs. ${awayTeamLineup.name}
-	`)
+    console.log(`\nLineups for match:\n${URL}\n
+    ${homeTeamLineup.name} vs. ${awayTeamLineup.name}
+    `)
+  }
 
+  disconnect()
   await browser.close()
 })()
