@@ -1,4 +1,4 @@
-const getLineupForTeam = async (page, side) => {
+const getLineup = async (page, side) => {
   const lineupSelector = `.fi-players__onpitch--${side} > ul li .fi-p`
   const subsSelector = `.fi-players__onpitch--${side} > .fi-players__substitutes ul li .fi-p`
   const coachSelector = `.fi-match__lineups .fi-players__onpitch--${side} .fi-players__coaches .fi-p`
@@ -59,4 +59,4 @@ const getLineupForTeam = async (page, side) => {
   }
 }
 
-export default getLineupForTeam
+export default getLineup

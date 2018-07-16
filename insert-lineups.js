@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer'
 import { connect } from './db'
-import getLineupForTeam from './getLineupForTeam'
+import getLineup from './get-lineup'
 ;(async () => {
   const { db, disconnect } = await connect()
   const browser = await puppeteer.launch()
@@ -19,8 +19,8 @@ import getLineupForTeam from './getLineupForTeam'
     // Wait for selector to appear on the page
     await page.waitForSelector('.fi-players__onpitch--home > ul li .fi-p')
     // Extract the results from the page...
-    const homeTeamLineup = await getLineupForTeam(page, 'home')
-    const awayTeamLineup = await getLineupForTeam(page, 'away')
+    const homeTeamLineup = await getLineup(page, 'home')
+    const awayTeamLineup = await getLineup(page, 'away')
 
     console.log(`\nLineups for match:\n${URL}\n
     ${homeTeamLineup.name} vs. ${awayTeamLineup.name}
