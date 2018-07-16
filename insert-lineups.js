@@ -12,19 +12,32 @@ import getLineup from './get-lineup'
     .find()
     .toArray()
 
+  // Loop over the games and update it with the scraped lineups
   for (let game of games) {
-    console.log('game.matchURL', `${game.matchURL}#match-lineups`)
     await page.goto(`${game.matchURL}#match-lineups`)
 
     // Wait for selector to appear on the page
     await page.waitForSelector('.fi-players__onpitch--home > ul li .fi-p')
-    // Extract the results from the page...
+    // Scrape the lineups from the fifa.com page...
     const homeTeamLineup = await getLineup(page, 'home')
     const awayTeamLineup = await getLineup(page, 'away')
 
-    console.log(`\nLineups for match:\n${URL}\n
-    ${homeTeamLineup.name} vs. ${awayTeamLineup.name}
-    `)
+    console.log(`
+Lineups for match:
+${game.matchURL}
+
+---
+
+_id: ${game._id}
+homeTeam: ${game.homeTeam}
+awayTeam: ${game.awayTeam}
+${homeTeamLineup.name} vs. ${awayTeamLineup.name}
+`)
+    // Update the game
+    const updatedGame = await db
+      .collection('games')
+      .findOneAndUpdate({ _id: game._id }, { $set: { awayTeamLineup, homeTeamLineup } })
+    console.log(`Succuesfully updated game: ${updatedGame.value._id} 👍`)
   }
 
   disconnect()
