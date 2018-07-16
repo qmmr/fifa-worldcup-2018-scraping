@@ -11,8 +11,7 @@ const getLineup = async (page, side) => {
       ...node.dataset,
       photoURL: node.querySelector('.fi-p__photo img').getAttribute('src'),
       jerseyNum: node.querySelector('.fi-p__jerseyNum span').textContent,
-      playerURL:
-        'https://www.fifa.com/worldcup/matches' + node.querySelector('.fi-p__info .fi-p__n a').getAttribute('href'),
+      playerURL: 'https://www.fifa.com' + node.querySelector('.fi-p__info .fi-p__n a').getAttribute('href'),
     }))
   }, lineupSelector)
 
@@ -23,8 +22,7 @@ const getLineup = async (page, side) => {
       ...node.dataset,
       photoURL: node.querySelector('.fi-p__photo img').getAttribute('src'),
       jerseyNum: node.querySelector('.fi-p__jerseyNum span').textContent,
-      playerURL:
-        'https://www.fifa.com/worldcup/matches' + node.querySelector('.fi-p__info .fi-p__n a').getAttribute('href'),
+      playerURL: 'https://www.fifa.com' + node.querySelector('.fi-p__info .fi-p__n a').getAttribute('href'),
     }))
   }, subsSelector)
 
@@ -34,9 +32,7 @@ const getLineup = async (page, side) => {
     return {
       name: coachNode.querySelector('.fi-p__info .fi-p__n a').getAttribute('title'),
       photo: coachNode.querySelector('.fi-p__photo img').getAttribute('src'),
-      personalURL:
-        'https://www.fifa.com/worldcup/matches' +
-        coachNode.querySelector('.fi-p__info .fi-p__n a').getAttribute('href'),
+      personalURL: 'https://www.fifa.com' + coachNode.querySelector('.fi-p__info .fi-p__n a').getAttribute('href'),
     }
   }, coachSelector)
 
