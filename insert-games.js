@@ -31,7 +31,8 @@ const getStage = matchUTCDate => {
 }
 
 const createMatchData = ($match, teams) => {
-  const matchURL = `http://fifa.com/${$match.attr('href')}`
+  const matchURL = `http://fifa.com${$match.attr('href')}`
+  const matchID = $match.find('.fi-mu.result').data('id')
   const $status = $match.find('.fi-mu__status .fi-s__status .post_match')
   const status = $status.text().trim()
   const finished = !$status.hasClass('hidden')
@@ -65,6 +66,7 @@ const createMatchData = ($match, teams) => {
     datetime: matchUTCDate,
     finished,
     homeTeam: homeTeam._id,
+    matchID,
     matchURL,
     overtime,
     overtimeScore,
@@ -93,7 +95,7 @@ const createMatchData = ($match, teams) => {
     .toArray()
 
   // fetch data from URL and parse it using cheerio
-  const URL = 'https://www.fifa.com/worldcup/matches/#groupphase'
+  const URL = 'https://www.fifa.com/worldcup/matches/'
   const { response, html } = await asyncRequest(URL)
   const $ = cheerio.load(html)
 
@@ -122,9 +124,6 @@ const createMatchData = ($match, teams) => {
   } else {
     console.log(`\nSorry, no new matches found 😭\n`)
   }
-
-  // FIXME: Currently not possible with this setup, as the additional information is loaded with JS
-  // matcheDataList.forEach(collectMatchDetails)
 
   // TODO: Not used right now, but might be needed later to update the teams with players
   // teams.forEach(async (team, idx) => {
