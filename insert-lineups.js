@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer'
 import { connect } from './db'
-import getLineup from './get-lineup'
+import getLineup from './helpers/get-lineup'
 ;(async () => {
   const { db, disconnect } = await connect()
   const browser = await puppeteer.launch()
