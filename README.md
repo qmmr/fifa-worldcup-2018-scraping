@@ -7,8 +7,17 @@
 ### Usage:
 - clone the [git@github.com:qmmr/fifa-worldcup-2018-scraping.git](git@github.com:qmmr/fifa-worldcup-2018-scraping.git)
 - `cd fifa-worldcup-2018-scraping`
-- `.env` file to set env variables needed to connect to your chosen MongoDB server -> [dotenv](https://www.npmjs.com/package/dotenv)
-- make the files executable `chmod u+x ./insert-teams.mjs ./insert-games.mjs ./update-teams.mjs`
+- create `.env` file to set env variables needed to connect to your chosen MongoDB server
+  - [dotenv](https://www.npmjs.com/package/dotenv)
+  - If you want to use your local development server you can use these.
+    ```
+    DB_USER=admin
+    DB_PASSWORD=password
+    DB_HOST=127.0.0.1
+    DB_PORT=27017
+    DB_NAME=fifa-worldcup-2018
+    ```
+- make the files executable `chmod u+x ./insert-teams.mjs ./insert-games.mjs ./update-teams.mjs ./insert-lineups.js ./insert-groups.js`
 - run the commands in this order:
   1. `node -r esm insert-teams.js`
   1. `node -r esm insert-games.js`
