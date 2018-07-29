@@ -6,9 +6,11 @@
     "emojiString": "🇷🇺",
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/900px-Flag_of_Russia.png",
     "games": [],
+    "href": "https://www.fifa.com/worldcup/teams/team/43965/",
     "iso2": "ru",
     "name": "Russia",
-    "shortName": "RUS"
+    "shortName": "RUS",
+    "teamID": "43965"
   },
   {
     "_typeName": "Team",
@@ -17,12 +19,15 @@
     "emojiString": "🇸🇦",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Flag_of_Saudi_Arabia.svg/750px-Flag_of_Saudi_Arabia.png",
     "games": [],
+    "href": "https://www.fifa.com/worldcup/teams/team/43835/",
     "iso2": "sa",
     "name": "Saudi Arabia",
-    "shortName": "KSA"
+    "shortName": "KSA",
+    "teamID": "43835"
   },
   {
     "_typeName": "Team",
+    "teamID": "43855",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-eg",
     "emojiString": "🇪🇬",
@@ -30,7 +35,8 @@
     "games": [],
     "iso2": "eg",
     "name": "Egypt",
-    "shortName": "EGY"
+    "shortName": "EGY",
+    "href": "https://www.fifa.com/worldcup/teams/team/43855/"
   },
   {
     "_typeName": "Team",
@@ -39,9 +45,11 @@
     "emojiString": "🇺🇾",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Uruguay.svg/900px-Flag_of_Uruguay.png",
     "games": [],
+    "href": "https://www.fifa.com/worldcup/teams/team/43930/",
     "iso2": "uy",
     "name": "Uruguay",
-    "shortName": "URU"
+    "shortName": "URU",
+    "teamID": "43930"
   },
   {
     "_typeName": "Team",
@@ -50,9 +58,11 @@
     "emojiString": "🇵🇹",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/600px-Flag_of_Portugal.png",
     "games": [],
+    "href": "https://www.fifa.com/worldcup/teams/team/43963/",
     "iso2": "pt",
     "name": "Portugal",
-    "shortName": "POR"
+    "shortName": "POR",
+    "teamID": "43963"
   },
   {
     "_typeName": "Team",
@@ -61,12 +71,15 @@
     "emojiString": "🇪🇸",
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/750px-Flag_of_Spain.png",
     "games": [],
+    "href": "https://www.fifa.com/worldcup/teams/team/43969/",
     "iso2": "es",
     "name": "Spain",
-    "shortName": "ESP"
+    "shortName": "ESP",
+    "teamID": "43969"
   },
   {
     "_typeName": "Team",
+    "teamID": "43872",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-ma",
     "emojiString": "🇲🇦",
@@ -74,7 +87,8 @@
     "games": [],
     "iso2": "ma",
     "name": "Morocco",
-    "shortName": "MAR"
+    "shortName": "MAR",
+    "href": "https://www.fifa.com/worldcup/teams/team/43872/"
   },
   {
     "_typeName": "Team",
@@ -85,10 +99,13 @@
     "games": [],
     "iso2": "ir",
     "name": "Iran",
-    "shortName": "IRN"
+    "shortName": "IRN",
+    "teamID": "43817",
+    "href": "https://www.fifa.com/worldcup/teams/team/43817/"
   },
   {
     "_typeName": "Team",
+    "teamID": "43946",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-fr",
     "emojiString": "🇫🇷",
@@ -96,10 +113,12 @@
     "games": [],
     "iso2": "fr",
     "name": "France",
-    "shortName": "FRA"
+    "shortName": "FRA",
+    "href": "https://www.fifa.com/worldcup/teams/team/43946/"
   },
   {
     "_typeName": "Team",
+    "teamID": "43976",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-au",
     "emojiString": "🇦🇺",
@@ -107,10 +126,12 @@
     "games": [],
     "iso2": "au",
     "name": "Australia",
-    "shortName": "AUS"
+    "shortName": "AUS",
+    "href": "https://www.fifa.com/worldcup/teams/team/43976/"
   },
   {
     "_typeName": "Team",
+    "teamID": "43929",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-pe",
     "emojiString": "🇵🇪",
@@ -118,10 +139,12 @@
     "games": [],
     "iso2": "pe",
     "name": "Peru",
-    "shortName": "PER"
+    "shortName": "PER",
+    "href": "https://www.fifa.com/worldcup/teams/team/43929/"
   },
   {
     "_typeName": "Team",
+    "teamID": "43941",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-dk",
     "emojiString": "🇩🇰",
@@ -129,10 +152,12 @@
     "games": [],
     "iso2": "dk",
     "name": "Denmark",
-    "shortName": "DEN"
+    "shortName": "DEN",
+    "href": "https://www.fifa.com/worldcup/teams/team/43941/"
   },
   {
     "_typeName": "Team",
+    "teamID": "43922",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-ar",
     "emojiString": "🇦🇷",
@@ -140,10 +165,12 @@
     "games": [],
     "iso2": "ar",
     "name": "Argentina",
-    "shortName": "ARG"
+    "shortName": "ARG",
+    "href": "https://www.fifa.com/worldcup/teams/team/43922/"
   },
   {
     "_typeName": "Team",
+    "teamID": "43951",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-is",
     "emojiString": "🇮🇸",
@@ -151,10 +178,12 @@
     "games": [],
     "iso2": "is",
     "name": "Iceland",
-    "shortName": "ISL"
+    "shortName": "ISL",
+    "href": "https://www.fifa.com/worldcup/teams/team/43951/"
   },
   {
     "_typeName": "Team",
+    "teamID": "43938",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-hr",
     "emojiString": "🇭🇷",
@@ -162,10 +191,12 @@
     "games": [],
     "iso2": "hr",
     "name": "Croatia",
-    "shortName": "CRO"
+    "shortName": "CRO",
+    "href": "https://www.fifa.com/worldcup/teams/team/43938/"
   },
   {
     "_typeName": "Team",
+    "teamID": "43876",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-ng",
     "emojiString": "🇳🇬",
@@ -173,10 +204,12 @@
     "games": [],
     "iso2": "ng",
     "name": "Nigeria",
-    "shortName": "NGA"
+    "shortName": "NGA",
+    "href": "https://www.fifa.com/worldcup/teams/team/43876/"
   },
   {
     "_typeName": "Team",
+    "teamID": "43924",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-br",
     "emojiString": "🇧🇷",
@@ -184,7 +217,8 @@
     "games": [],
     "iso2": "br",
     "name": "Brazil",
-    "shortName": "BRA"
+    "shortName": "BRA",
+    "href": "https://www.fifa.com/worldcup/teams/team/43924/"
   },
   {
     "_typeName": "Team",
@@ -193,12 +227,15 @@
     "emojiString": "🇨🇭",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/320px-Flag_of_Switzerland_%28Pantone%29.png",
     "games": [],
+    "href": "https://www.fifa.com/worldcup/teams/team/43971/",
     "iso2": "ch",
     "name": "Switzerland",
-    "shortName": "SUI"
+    "shortName": "SUI",
+    "teamID": "43971"
   },
   {
     "_typeName": "Team",
+    "teamID": "43901",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-cr",
     "emojiString": "🇨🇷",
@@ -206,21 +243,25 @@
     "games": [],
     "iso2": "cr",
     "name": "Costa Rica",
-    "shortName": "CRC"
+    "shortName": "CRC",
+    "href": "https://www.fifa.com/worldcup/teams/team/43901/"
   },
   {
     "_typeName": "Team",
+    "href": "https://www.fifa.com/worldcup/teams/team/1902465/",
+    "name": "Serbia",
+    "teamID": "1902465",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-rs",
     "emojiString": "🇷🇸",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/1350px-Flag_of_Serbia.png",
     "games": [],
     "iso2": "rs",
-    "name": "Serbia",
     "shortName": "SRB"
   },
   {
     "_typeName": "Team",
+    "teamID": "43948",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-de",
     "emojiString": "🇩🇪",
@@ -228,10 +269,12 @@
     "games": [],
     "iso2": "de",
     "name": "Germany",
-    "shortName": "GER"
+    "shortName": "GER",
+    "href": "https://www.fifa.com/worldcup/teams/team/43948/"
   },
   {
     "_typeName": "Team",
+    "teamID": "43911",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-mx",
     "emojiString": "🇲🇽",
@@ -239,7 +282,8 @@
     "games": [],
     "iso2": "mx",
     "name": "Mexico",
-    "shortName": "MEX"
+    "shortName": "MEX",
+    "href": "https://www.fifa.com/worldcup/teams/team/43911/"
   },
   {
     "_typeName": "Team",
@@ -248,9 +292,11 @@
     "emojiString": "🇸🇪",
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/1600px-Flag_of_Sweden.png",
     "games": [],
+    "href": "https://www.fifa.com/worldcup/teams/team/43970/",
     "iso2": "se",
     "name": "Sweden",
-    "shortName": "SWE"
+    "shortName": "SWE",
+    "teamID": "43970"
   },
   {
     "_typeName": "Team",
@@ -261,10 +307,13 @@
     "games": [],
     "iso2": "kr",
     "name": "South Korea",
-    "shortName": "KOR"
+    "shortName": "KOR",
+    "teamID": "43822",
+    "href": "https://www.fifa.com/worldcup/teams/team/43822/"
   },
   {
     "_typeName": "Team",
+    "teamID": "43935",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-be",
     "emojiString": "🇧🇪",
@@ -272,10 +321,12 @@
     "games": [],
     "iso2": "be",
     "name": "Belgium",
-    "shortName": "BEL"
+    "shortName": "BEL",
+    "href": "https://www.fifa.com/worldcup/teams/team/43935/"
   },
   {
     "_typeName": "Team",
+    "teamID": "43914",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-pa",
     "emojiString": "🇵🇦",
@@ -283,7 +334,8 @@
     "games": [],
     "iso2": "pa",
     "name": "Panama",
-    "shortName": "PAN"
+    "shortName": "PAN",
+    "href": "https://www.fifa.com/worldcup/teams/team/43914/"
   },
   {
     "_typeName": "Team",
@@ -292,12 +344,15 @@
     "emojiString": "🇹🇳",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Tunisia.svg/1200px-Flag_of_Tunisia.png",
     "games": [],
+    "href": "https://www.fifa.com/worldcup/teams/team/43888/",
     "iso2": "tn",
     "name": "Tunisia",
-    "shortName": "TUN"
+    "shortName": "TUN",
+    "teamID": "43888"
   },
   {
     "_typeName": "Team",
+    "teamID": "43942",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-england",
     "emojiString": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
@@ -305,7 +360,8 @@
     "games": [],
     "iso2": "gb-eng",
     "name": "England",
-    "shortName": "ENG"
+    "shortName": "ENG",
+    "href": "https://www.fifa.com/worldcup/teams/team/43942/"
   },
   {
     "_typeName": "Team",
@@ -314,9 +370,11 @@
     "emojiString": "🇵🇱",
     "flag": "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/1280px-Flag_of_Poland.png",
     "games": [],
+    "href": "https://www.fifa.com/worldcup/teams/team/43962/",
     "iso2": "pl",
     "name": "Poland",
-    "shortName": "POL"
+    "shortName": "POL",
+    "teamID": "43962"
   },
   {
     "_typeName": "Team",
@@ -325,12 +383,15 @@
     "emojiString": "🇸🇳",
     "flag": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/900px-Flag_of_Senegal.svg.png",
     "games": [],
+    "href": "https://www.fifa.com/worldcup/teams/team/43879/",
     "iso2": "sn",
     "name": "Senegal",
-    "shortName": "SEN"
+    "shortName": "SEN",
+    "teamID": "43879"
   },
   {
     "_typeName": "Team",
+    "teamID": "43926",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-co",
     "emojiString": "🇨🇴",
@@ -338,10 +399,12 @@
     "games": [],
     "iso2": "co",
     "name": "Colombia",
-    "shortName": "COL"
+    "shortName": "COL",
+    "href": "https://www.fifa.com/worldcup/teams/team/43926/"
   },
   {
     "_typeName": "Team",
+    "teamID": "43819",
     "createdAt": "2018-06-14T21:55:32.463Z",
     "emoji": "flag-jp",
     "emojiString": "🇯🇵",
@@ -349,6 +412,7 @@
     "games": [],
     "iso2": "jp",
     "name": "Japan",
-    "shortName": "JPN"
+    "shortName": "JPN",
+    "href": "https://www.fifa.com/worldcup/teams/team/43819/"
   }
 ]
