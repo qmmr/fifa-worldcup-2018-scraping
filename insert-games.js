@@ -2,7 +2,7 @@
 import request from 'request'
 import cheerio from 'cheerio'
 import differenceBy from 'lodash/differenceBy'
-import asyncRequest from './async-request'
+import asyncRequest from './helpers/async-request.mjs'
 import { connect } from './db'
 
 const getStage = matchUTCDate => {

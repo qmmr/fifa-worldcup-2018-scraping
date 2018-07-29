@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 import puppeteer from 'puppeteer'
 import { connect } from './db'
-import getLineup from './get-lineup'
+import getLineup from './helpers/get-lineup'
 
 const createGroupData = async (page, tableSelector) => {
   const groupData = await page.evaluate(selector => {
