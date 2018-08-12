@@ -60,8 +60,10 @@ const createGroupData = async (page, tableSelector) => {
 
   // Create groupData from information found in '.fi-standings-list table'
   const groupData = await createGroupData(page, tableSelector)
+  // TODO: Write a script to run all commands in sequence
   // TODO: Add team id to fixtures/team.json
   // TODO: Associate games with teams in groups
+  // TODO: Create insert-players.js
   console.log('====================================')
   groupData.forEach(group => {
     // console.log(JSON.stringify(group, null, 2))
