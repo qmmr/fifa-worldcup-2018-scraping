@@ -1,8 +1,6 @@
 #!/usr/bin/env node
 import mongodb from 'mongodb'
 import { connect } from './db'
-// TODO: flow-typed
-// import type { database } from 'mongodb'
 ;(async () => {
   const { db, disconnect } = await connect()
   const query = {}
