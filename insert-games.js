@@ -49,13 +49,13 @@ const createMatchData = ($match, teams) => {
     .find('.fi-mu__penaltyscore-wrap')
     .text()
     .trim()
-  const homeTeamISO2 = $homeTeam.find('.fi-t__nTri').text()
-  const awayTeamISO2 = $awayTeam.find('.fi-t__nTri').text()
+  const homeTeamShortName = $homeTeam.find('.fi-t__nTri').text()
+  const awayTeamShortName = $awayTeam.find('.fi-t__nTri').text()
   // const teamHomeId = $homeTeam.data('team-id') // TODO: Use this to get more info about the team
   // const awayTeamId = $awayTeam.data('team-id')
   // Find teams from DB teams
-  const homeTeam = teams.filter(team => team.shortName === homeTeamISO2)[0]
-  const awayTeam = teams.filter(team => team.shortName === awayTeamISO2)[0]
+  const homeTeam = teams.find(team => team.shortName === homeTeamShortName)
+  const awayTeam = teams.find(team => team.shortName === awayTeamShortName)
   const matchUTCDate = $match.find('.fi-mu__info__datetime').data('utcdate')
   const stage = getStage(matchUTCDate)
   // TODO: Search the match URL and find out players who scored and attach that info somehow 🤔
