@@ -19,11 +19,11 @@
     ```
 - make the files executable `chmod u+x ./insert-teams.mjs ./insert-games.mjs ./update-teams.mjs ./insert-lineups.js ./insert-groups.js`
 - run the commands in this order:
-  1. `node -r esm insert-teams.js`
-  1. `node -r esm insert-games.js`
-  1. `node -r esm update-teams.js`
-  1. `node -r esm insert-lineups.js`
-  1. `node -r esm insert-groups.js`
+  1. `node -r esm src/insert-teams.js`
+  1. `node -r esm src/insert-games.js`
+  1. `node -r esm src/update-teams.js`
+  1. `node -r esm src/insert-lineups.js`
+  1. `node -r esm src/insert-groups.js`
 
 1. Insert teams populates your DB with teams data from `teams.json`.
 1. Insert games scrapes the [https://www.fifa.com/worldcup/matches/](https://www.fifa.com/worldcup/matches/) and populates your DB with games data.
