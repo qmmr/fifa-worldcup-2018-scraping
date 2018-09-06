@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node transpile.js",
-    "dev": "nodemon transpile.js"
+    "insert-teams": "node -r esm ./src/insert-teams",
+    "insert-games": "node -r esm ./src/insert-games"
   },
   "keywords": [],
   "author": "",
