@@ -7,20 +7,16 @@ dotenv.config()
 // TODO: Check env variables and print error when not provided
 const DB_USER = process.env.DB_USER || 'admin'
 const DB_PASSWORD = process.env.DB_PASSWORD || 'password'
-const DB_HOST = process.env.DB_HOST || '127.0.0.1'
+const DB_HOST = process.env.DB_HOST || 'db'
 const DB_PORT = process.env.DB_PORT || '27017'
 const DB_NAME = process.env.DB_NAME || 'fifa-worldcup-2018'
 const URL = process.env.URL || 'https://www.fifa.com/worldcup/matches/#groupphase'
 
 export const connect = async () => {
   try {
-    const database = await mongodb.MongoClient.connect(
-      `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`
-    )
+    const database = await mongodb.MongoClient.connect(`mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}`)
     const db = database.db(DB_NAME)
-    console.log(
-      `Connection as user "${DB_USER}" to mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}\n has been established! 🎉\n`
-    )
+    console.log(`Connection to mongodb://${DB_HOST}:${DB_PORT}/${DB_NAME}\n has been established! 🎉\n`)
 
     return {
       db,

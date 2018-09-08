@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "setup": "node -r esm ./src/insert-teams && node -r esm ./src/insert-games",
     "insert-teams": "node -r esm ./src/insert-teams",
     "insert-games": "node -r esm ./src/insert-games"
   },
